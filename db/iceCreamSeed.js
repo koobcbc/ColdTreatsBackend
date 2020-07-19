@@ -1,6 +1,6 @@
 const mongoose = require("./connections.js");
 const db = mongoose.connection
-const IceCream = require("../models/iceCreamSeed");
+const IceCream = require("../models/iceCreamModels");
 
 db.on("error", console.error.bind(console, "MongoDB connection error:"));
 
