@@ -1,13 +1,13 @@
 const mongoose = require('mongoose')
 
-// let MONGODB_URI = 'mongodb://127.0.0.1:27017/itemsDatabase'
+const MONGODB_URI = 'mongodb://127.0.0.1:27017/ICMSDatabase'
 let MONGODB_URI = ''
 
 if(process.env.NODE_ENV === 'production') {
     // DB_URL will be used by heroku to connnect to Mongo Atlas DB
     MONGODB_URI = process.env.DB_URL
 } else {
-    MONGODB_URI = 'mongodb://127.0.0.1:27017/itemsDatabase'
+    MONGODB_URI = 'mongodb://127.0.0.1:27017/ICMSDatabase'
 }
 
 mongoose
