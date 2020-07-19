@@ -1,12 +1,25 @@
 const mongoose = require('mongoose')
 
-mongoose.connect('mongodb://localhost/iceCream',  
-{ 
-    useUnifiedTopology: true, 
-    useNewUrlParser: true, 
-    useFindAndModify: false  
-})
+// let MONGODB_URI = 'mongodb://127.0.0.1:27017/itemsDatabase'
+let MONGODB_URI = ''
 
-mongoose.Promise = Promise
+if(process.env.NODE_ENV === 'production') {
+    // DB_URL will be used by heroku to connnect to Mongo Atlas DB
+    MONGODB_URI = process.env.DB_URL
+} else {
+    MONGODB_URI = 'mongodb://127.0.0.1:27017/itemsDatabase'
+}
+
+mongoose
+    .connect(MONGODB_URI, { 
+        useUnifiedTopology: true, 
+        useNewUrlParser: true, 
+        useFindAndModify: false  })
+    .then(() => {
+        console.log('Successfully connected to MongoDB.')
+    })
+    .catch(e => {
+        console.error('Connection error', e.message)
+    })
 
 module.exports = mongoose
