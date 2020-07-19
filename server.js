@@ -3,7 +3,8 @@ const app = express();
 const cors = require('cors')
 const logger = require('morgan');
 const iceCreamController = require('./controllers/iceCream');
-const milkshakeController = require('./controllers/milkshakes')
+const milkshakeController = require('./controllers/milkshakes');
+
 const PORT = process.env.PORT || 3000
 
 app.use(cors())
@@ -12,7 +13,7 @@ app.use(express.json())
 app.use(logger('dev'))
 
 app.use('/api', iceCreamController);
-app.use('/api', milkshakeController)
+app.use('/api', milkshakeController);
 
 app.set("port", process.env.PORT || 3000);
 

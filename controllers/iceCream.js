@@ -4,7 +4,7 @@ const IceCream = require('../models/iceCreamModels');
 
 router.get('/', (req, res) => res.send('This is root'))
 
-router.get('/songs', async (req, res) => {
+router.get('/iceCream', async (req, res) => {
     try{
         const iceCream = await IceCream.find()
         return res.json({ iceCream })
@@ -14,24 +14,24 @@ router.get('/songs', async (req, res) => {
     }
 });
 
-router.post('/songs', async (req, res) => {
+router.post('/iceCream', async (req, res) => {
     try{
-        const songs = await new Song(req.body)
-        await songs.save()
+        const iceCream = await new IceCream(req.body)
+        await iceCream.save()
         return res.status(201).json({
-            songs
+            iceCream
         });
     } catch (error) {
         return res.status(500).json({ error: error.message})
     }
 });
 
-router.get('/songs/:id', async (req, res) => {
+router.get('/iceCream/:id', async (req, res) => {
     try{
         const {id} = req.params;
-        const songs = await Song.findById(id)
-        if(songs) {
-            return res.status(200).json({songs})
+        const iceCream = await IceCream.findById(id)
+        if(iceCream) {
+            return res.status(200).json({iceCream})
         }
         return res.status(404).send('Song with specific ID doesnt exist');
     } catch (error) {
@@ -39,31 +39,31 @@ router.get('/songs/:id', async (req, res) => {
     }
 })
 
-router.put('/songs/:id', async (req, res) => {
+router.put('/iceCream/:id', async (req, res) => {
     try{
         const {id} = req.params;
-        await Song.findByIdAndUpdate(id, req.body, { new: true }, (err, song) => {
+        await IceCream.findByIdAndUpdate(id, req.body, { new: true }, (err, iceCream) => {
             if (err) {
                 res.status(500).send(err)
             }
-            if (!song) {
-                res.status(500).send('Song not found');
+            if (!iceCream) {
+                res.status(500).send('IceCream not found');
             }
-            return res.status(200).json(song)
+            return res.status(200).json(iceCream)
         })
     } catch (error) {
         return res.status(500).send(error.message)
     }
 });
 
-router.delete('/songs/:id', async (req, res) => {
+router.delete('/iceCream/:id', async (req, res) => {
     try{
         const{id} = req.params;
-        const deleted = await Song.findByIdAndDelete(id)
+        const deleted = await IceCream.findByIdAndDelete(id)
         if (deleted) {
-            return res.status(200).send('Song Deleted');
+            return res.status(200).send('IceCream Deleted');
         }
-        throw new Error('Song not found');
+        throw new Error('IceCream not found');
     } catch (error) {
         return res.status(500).send(error.message)
     }
