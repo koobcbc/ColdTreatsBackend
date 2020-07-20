@@ -9,5 +9,5 @@ const iceCreamSchema = new mongoose.Schema({
     price: {type: Number, required: true}
 })
 
-IceCream = mongoose.model('iceCream', iceCreamSchema);
+const IceCream = mongoose.model('iceCream', iceCreamSchema);
 module.exports = IceCream;
