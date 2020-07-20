@@ -13,7 +13,7 @@ const main = async () => {
             name: 'Doug',
             flavor: 'chocolate',
             holder: 'cup',
-            toppings: 'ores',
+            toppings: 'oreos',
             size: 'large',
             price: 5.00,
             paid: true
