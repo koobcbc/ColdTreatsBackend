@@ -40,6 +40,11 @@ router.get('/iceCream/:id', async (req, res) => {
 })
 
 router.put('/iceCream/:id', async (req, res) => {
+    if (req.body.paid === "true") {
+        req.body.paid = true;
+    } else {
+        req.body.paid = false;
+    }
     try{
         const {id} = req.params;
         await IceCream.findByIdAndUpdate(id, req.body, { new: true }, (err, iceCream) => {
@@ -70,3 +75,4 @@ router.delete('/iceCream/:id', async (req, res) => {
 })
 
 module.exports = router;
+
