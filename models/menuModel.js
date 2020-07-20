@@ -66,7 +66,7 @@ const toppingsSchema = new mongoose.Schema([
     },
     {
         topping8: {type: String, required: true}
-    },
+    }
 ])
 
 const sizeSchema = new mongoose.Schema([
@@ -91,5 +91,5 @@ const menuSchema = new mongoose.Schema({
     size: [sizeSchema]
 })
 
-const MenuCream = mongoose.model('menu', menuSchema);
-module.exports = MenuCream;
+const Menu = mongoose.model('menu', menuSchema);
+module.exports = Menu;
