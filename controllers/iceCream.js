@@ -33,13 +33,18 @@ router.get('/iceCream/:id', async (req, res) => {
         if(iceCream) {
             return res.status(200).json({iceCream})
         }
-        return res.status(404).send('Song with specific ID doesnt exist');
+        return res.status(404).send('IceCream with specific ID doesnt exist');
     } catch (error) {
         return res.status(500).send(error.message);
     }
 })
 
 router.put('/iceCream/:id', async (req, res) => {
+    if (req.body.paid === "true") {
+        req.body.paid = true;
+    } else {
+        req.body.paid = false;
+    }
     try{
         const {id} = req.params;
         await IceCream.findByIdAndUpdate(id, req.body, { new: true }, (err, iceCream) => {
@@ -70,3 +75,4 @@ router.delete('/iceCream/:id', async (req, res) => {
 })
 
 module.exports = router;
+
