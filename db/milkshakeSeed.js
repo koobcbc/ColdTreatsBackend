@@ -14,14 +14,16 @@ const main = async () => {
             flavor: 'Cookies n Cream',
             toppings: 'ores',
             size: 'large',
-            price: 7.00
+            price: 7.00,
+            paid: true
         },
         {
             name: 'Brian',
             flavor: 'Pistachio',
             toppings: 'peanuts',
             size: 'large',
-            price: 7.00
+            price: 7.00,
+            paid: false
         },
     ]
   

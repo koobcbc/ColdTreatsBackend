@@ -5,7 +5,6 @@ const logger = require('morgan');
 const bodyParser = require('body-parser');
 const iceCreamController = require('./controllers/iceCream');
 const milkshakeController = require('./controllers/milkshakes');
-
 const PORT = process.env.PORT || 3000
 
 app.use(cors())
