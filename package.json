@@ -9,7 +9,6 @@
     "dev": "nodemon server.js",
     "db:seed1": "node db/iceCreamSeed.js",
     "db:seed": "node db/milkshakeSeed.js"
-
   },
   "repository": {
     "type": "git",
