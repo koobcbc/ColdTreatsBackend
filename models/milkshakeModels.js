@@ -6,7 +6,8 @@ const milkshakeSchema = new mongoose.Schema(
         flavor: { type: String, required: true },
         toppings: { type: String, required: true },
         size: { type: String, required: true},
-        price: { type: Number, required: true}
+        price: { type: Number, required: true},
+        paid: { type: Boolean, required: true}
     }
     // ,
     // { timestamps: true },
