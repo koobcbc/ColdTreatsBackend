@@ -10,38 +10,38 @@ const main = async () => {
   
     const menu = [
         {
-            flavor: {
-                flavor1:'Chocolate',
-                flavor2: 'Vanilla',
-                flavor3: 'Strawberry',
-                flavor4: 'Cookies n Cream',
-                flavor5: 'Mint Chocolate Chip',
-                flavor6: 'Pistachio',
-                flavor7: 'Birthday Cake',
-                flavor8: 'Buttered Pecan'
-            },
-            holder: {
-                holder1:'Cup',
-                holder2: 'Bowl',
-                holder3: 'Cone',
-                holder4: 'Waffle Cone'
-            },
-            toppings: {
-                topping1:'Oreos',
-                topping2: 'Sprinkles',
-                topping3: 'Gummy Bears',
-                topping4: 'Peanuts',
-                topping5: 'Peanut Butter Cups',
-                topping6: 'Hot Fudge',
-                topping7: 'Chocolate Sauce',
-                topping8: 'Pecans'
-            },
-            size: {
-                size1: 'Small',
-                size2: 'Medium',
-                size3: 'Large',
-                size4: 'Extra-Large'
-            }
+            flavor: [
+                'Chocolate',
+                 'Vanilla',
+                 'Strawberry',
+                 'Cookies n Cream',
+                 'Mint Chocolate Chip',
+                 'Pistachio',
+                 'Birthday Cake',
+                 'Buttered Pecan'
+            ],
+            holder: [
+                'Cup',
+                 'Bowl',
+                 'Cone',
+                 'Waffle Cone'
+            ],
+            toppings: [
+                'Oreos',
+                 'Sprinkles',
+                 'Gummy Bears',
+                 'Peanuts',
+                 'Peanut Butter Cups',
+                 'Hot Fudge',
+                 'Chocolate Sauce',
+                 'Pecans'
+            ],
+            size: [
+                 'Small',
+                 'Medium',
+                 'Large',
+                 'Extra-Large'
+            ]
         }
     ]
   
