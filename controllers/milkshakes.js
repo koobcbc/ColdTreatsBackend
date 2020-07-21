@@ -41,11 +41,11 @@ router.get('/milkshakes/:id', async (req, res) => {
 })
 
 router.put('/milkshakes/:id', async (req, res) => {
-    if (req.body.paid === "true") {
-        req.body.paid = true;
-    } else {
-        req.body.paid = false;
-    }
+    // if (req.body.paid === "true") {
+    //     req.body.paid = true;
+    // } else {
+    //     req.body.paid = false;
+    // }
     try {
         const { id } = req.params;
         await Milkshake.findByIdAndUpdate(id, req.body, { new: true }, (err, shake) => {
