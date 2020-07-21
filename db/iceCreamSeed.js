@@ -13,7 +13,9 @@ const main = async () => {
             name: 'Doug',
             flavor: 'chocolate',
             holder: 'cup',
-            toppings: 'oreos',
+            topping1: 'oreos',
+            topping2: 'sprinkles',
+            topping3: 'gummy bears',
             size: 'large',
             price: 5.00,
             paid: true
@@ -22,7 +24,9 @@ const main = async () => {
             name: 'Alex',
             flavor: 'vanilla',
             holder: 'bowl',
-            toppings: 'sprinkles',
+            topping1: 'sprinkles',
+            topping2: 'hot fudge',
+            topping3: 'choclate sauce',
             size: 'large',
             price: 6.00,
             paid: false
