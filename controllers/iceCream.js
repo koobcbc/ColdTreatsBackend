@@ -40,7 +40,6 @@ router.get('/iceCream/:id', async (req, res) => {
 })
 
 router.put('/iceCream/:id', async (req, res) => {
-    
     try{
         const {id} = req.params;
         await IceCream.findByIdAndUpdate(id, req.body, { new: true }, (err, iceCream) => {

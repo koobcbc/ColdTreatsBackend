@@ -12,7 +12,9 @@ const main = async () => {
         {
             name: 'Joe',
             flavor: 'Cookies n Cream',
-            toppings: 'ores',
+            topping1: 'oreos',
+            topping2: 'hot fudge',
+            topping3: 'sprinkles',
             size: 'large',
             price: 7.00,
             paid: true
@@ -20,7 +22,9 @@ const main = async () => {
         {
             name: 'Brian',
             flavor: 'Pistachio',
-            toppings: 'peanuts',
+            topping1: 'peanuts',
+            topping2: 'oreos',
+            topping3: 'hot fudge',
             size: 'large',
             price: 7.00,
             paid: false

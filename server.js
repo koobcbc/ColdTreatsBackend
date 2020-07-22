@@ -5,6 +5,7 @@ const logger = require('morgan');
 const bodyParser = require('body-parser');
 const iceCreamController = require('./controllers/iceCream');
 const milkshakeController = require('./controllers/milkshakes');
+const menuController = require('./controllers/menu')
 const PORT = process.env.PORT || 3000
 
 app.use(cors())
@@ -16,6 +17,7 @@ app.use(logger('dev'))
 
 app.use('/api', iceCreamController);
 app.use('/api', milkshakeController);
+app.use('/api', menuController);
 
 app.set("port", process.env.PORT || 3000);
 
